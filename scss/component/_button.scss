@@ -1,0 +1,29 @@
+@use "../global/function" as *;
+@use "../global/mixin" as *;
+@use "../global/variable" as *;
+
+.btn {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+/*=============================================================
+ btn / general
+=============================================================*/
+.btn-general {
+  width: 270px;
+  padding: 15px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  font-size: 20px;
+  text-align: center;
+
+  &.btn-general--black {
+    color: #29282a;
+    border: 1px solid #29282a;
+  }
+}

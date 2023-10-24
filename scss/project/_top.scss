@@ -1,0 +1,343 @@
+@use "../global/function" as *;
+@use "../global/mixin" as *;
+@use "../global/variable" as *;
+
+.sec-title {
+  color: #fff;
+  font-size: 40px;
+  font-family: "Lucida Handwriting";
+  letter-spacing: 1.5px;
+
+  &.sec-title--black {
+    color: #29282a;
+  }
+}
+
+/*=============================================================
+  section / kv
+=============================================================*/
+.sec-kv {
+  position: relative;
+  height: 100vh;
+  background-color: #4e4e4e;
+
+  .sec-kv-inner {
+    padding: 50px 0 60px;
+    margin: 0 auto;
+  }
+
+  .kv-img {
+    width: 60%;
+    height: calc(100vh - 109px);
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .kv-text {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 1.3;
+  }
+}
+
+/*=============================================================
+  section / about
+=============================================================*/
+.sec-about {
+  position: relative;
+  width: 100%;
+  min-height: 2500px;
+  background-image: url("/assets/img/img-coffee02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .sec-about-detail {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 245px 0 454px;
+    @include gradient(180deg, #28292b, transparent);
+
+    .sec-about-detail-title {
+      margin-top: 80px;
+      font-size: 34px;
+      font-family: "Yu Mincho";
+      text-shadow: 1px 2px 4px #4e4e4e;
+      line-height: 1.5;
+      letter-spacing: 5px;
+    }
+
+    .sec-about-detail-lead {
+      margin-top: 80px;
+      font-size: 18px;
+      font-family: "Yu Mincho";
+      line-height: 1.8;
+      letter-spacing: 1.25px;
+    }
+  }
+
+  .sec-about-detail-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+/*=============================================================
+  section / menu
+=============================================================*/
+.sec-menu {
+  position: relative;
+  background-color: #29282a;
+
+  .sec-menu-inner {
+    max-width: 1280px;
+    padding: 125px 0 168px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .sec-menu-detail-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 72px;
+    padding: 0 92px;
+  }
+
+  .sec-menu-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 470px;
+  }
+
+  .sec-menu-slider {
+    width: calc(100% - 490px);
+    margin-left: 24px;
+  }
+
+  .sec-menu-disc {
+    font-size: 16px;
+    font-family: "Noto Sans JP";
+    text-align: start;
+    line-height: 1.5;
+  }
+
+  .sec-menu-list {
+    margin-top: 54px;
+  }
+
+  .sec-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #fff;
+    font-size: 16px;
+    font-family: "Yu Gothic";
+
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+  }
+
+  .sec-menu-btn {
+    margin-top: 49px;
+  }
+}
+
+/*=============================================================
+  section / product
+=============================================================*/
+.sec-product {
+  position: relative;
+
+  .sec-product-inner {
+    padding: 125px 92px 168px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .sec-product-detail-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 72px;
+  }
+
+  .sec-product-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 470px;
+    margin-left: 65px;
+  }
+
+  .sec-product-img {
+    width: 100%;
+    height: 37.11vw;
+    max-width: 54.13vw;
+    object-fit: cover;
+  }
+
+  .sec-product-name {
+    color: #28292b;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Noto Sans JP";
+    text-align: start;
+    line-height: 1.5;
+  }
+
+  .sec-product-copy {
+    margin-top: 30px;
+    color: #28292b;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: "Noto Sans JP";
+    text-align: start;
+    line-height: 1.5;
+  }
+
+  .sec-product-disc {
+    max-width: 470px;
+    margin-top: 18px;
+    color: #28292b;
+    font-size: 16px;
+    font-family: "Noto Sans JP";
+    text-align: start;
+    line-height: 1.5;
+  }
+}
+
+/*=============================================================
+  section / message
+=============================================================*/
+.sec-message {
+  position: relative;
+  width: 100%;
+  min-height: 2500px;
+  @include gradient(180deg, #e8e4e1, transparent);
+
+  .sec-message-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 245px 0 454px;
+    color: #29282a;
+    text-align: center;
+  }
+
+  .sec-message-title {
+    margin-top: 80px;
+    font-size: 34px;
+    font-family: "Yu Mincho";
+    line-height: 1.5;
+    letter-spacing: 5px;
+  }
+
+  .sec-message-lead {
+    margin-top: 80px;
+    font-size: 18px;
+    font-family: "Yu Mincho";
+    line-height: 1.8;
+    letter-spacing: 1.25px;
+  }
+}
+
+/*=============================================================
+  section / info
+=============================================================*/
+.sec-info {
+  position: relative;
+  background-color: #f7f5f0;
+
+  .sec-info-inner {
+    padding: 125px 92px 67px;
+    text-align: center;
+  }
+
+  .sec-info-list {
+    max-width: 935px;
+    margin: 72px auto 0;
+
+    .sec-info-item {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      position: relative;
+      padding: 36px 41px;
+      background-color: #fff;
+      box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -120px;
+        transform: translateX(-50%);
+        width: 123px;
+        height: 13px;
+        background-image: url("../../assets/img/icon/icon-info-arrow.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s;
+      }
+
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .sec-info-item-label {
+      width: 100px;
+      padding: 5px 10px;
+      border-radius: 50px;
+      background-color: rgba($color: #382b1a, $alpha: 0.38);
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: "Noto Sans JP";
+      letter-spacing: 2px;
+    }
+
+    .sec-info-item-title {
+      margin-top: 16px;
+      color: #404040;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "Noto Sans JP";
+      line-height: 1.5;
+      letter-spacing: 1.5px;
+    }
+
+    .sec-info-item-date {
+      margin-top: 14px;
+      color: rgba($color: #404040, $alpha: 0.5);
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "Noto Sans JP";
+    }
+  }
+
+  .sec-info-btn {
+    margin-top: 70px;
+  }
+}

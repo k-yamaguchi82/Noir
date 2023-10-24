@@ -1,0 +1,41 @@
+@use "../global/function" as *;
+@use "../global/mixin" as *;
+@use "../global/variable" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-out;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  transform: translate(-50%, -50%);
+  width: vw(323);
+  min-height: vw(235);
+  visibility: hidden;
+  opacity: 0;
+  padding: vw(32);
+  border-radius: vw(12);
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.04);
+  background-color: $color-white;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}

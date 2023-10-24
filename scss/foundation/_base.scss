@@ -1,0 +1,23 @@
+@use "../global/font" as *;
+@use "../global/variable" as *;
+@use "../global/mixin" as *;
+@use "../global/function" as *;
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $color-base-white;
+  color: $color-white;
+  font-family: "Goudy Old Style", "Noto Sans JP", "Righteous", "Yu Mincho", メイリオ, sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

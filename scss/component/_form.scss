@@ -1,0 +1,286 @@
+@use "../global/function" as *;
+@use "../global/mixin" as *;
+@use "../global/variable" as *;
+
+/*=============================================================
+ input text
+=============================================================*/
+.input-text {
+  width: 100%;
+  height: vw(40);
+  padding-bottom: vw(8);
+  border-radius: 0;
+  border-bottom: solid 2px $color-secondary;
+  background-color: inherit;
+  color: $color-secondary;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  @include fz_vw(26);
+
+  &::placeholder {
+    color: rgba($color-secondary, 0.3);
+  }
+
+  &:placeholder-shown {
+    border-bottom: 2px solid rgba($color-secondary, 0.3);
+  }
+
+  &:disabled {
+    border-bottom: solid 2px rgba($color: $color-secondary, $alpha: 0.3);
+    color: rgba($color: $color-secondary, $alpha: 0.3);
+  }
+}
+
+/*=============================================================
+ input search
+=============================================================*/
+.input-search {
+  position: relative;
+  width: 100%;
+  padding-bottom: vw(12);
+  border-bottom: solid 2px $color-secondary;
+  background-color: inherit;
+  background-image: url("../../assets/img/icon/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: right 0 top vw(12);
+  background-size: vw(24);
+  color: $color-secondary;
+  font-weight: bold;
+  text-align: center;
+  @include fz_vw(26);
+}
+
+/*=============================================================
+ input postcode
+=============================================================*/
+.post-code {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: vw(8);
+  border-bottom: solid 2px $color-secondary;
+  column-gap: 8px;
+
+  &::before {
+    content: "〒";
+    position: absolute;
+    left: 0;
+    bottom: vw(7);
+    width: vw(14);
+    height: vw(14);
+    color: $color-secondary;
+    font-weight: bold;
+    @include fz_vw(14);
+  }
+
+  .input-post-code {
+    background-color: inherit;
+    color: $color-secondary;
+    width: 100%;
+    height: vw(43);
+    font-weight: bold;
+    @include fz_vw(33);
+  }
+
+  .post-code-hypen {
+    opacity: 0.3;
+    color: $color-secondary;
+    font-weight: bold;
+    @include fz_vw(33);
+  }
+}
+
+/*=============================================================
+ input textarea
+=============================================================*/
+.input-textarea {
+  padding: vw(16);
+  width: vw(323);
+  height: vw(135);
+  color: $color-secondary;
+  border: 1px solid $color-secondary;
+  border-radius: 9px;
+  background-color: $color-white;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5;
+  resize: none;
+  @include fz_vw(16);
+
+  &::placeholder {
+    color: rgba($color-secondary, 0.3);
+  }
+  &:placeholder-shown {
+    border: 1px solid rgba($color-secondary, 0.3);
+  }
+}
+
+/*=============================================================
+ select box
+=============================================================*/
+.selectbox {
+  width: 100%;
+  padding-bottom: vw(8);
+  border-bottom: solid 2px $color-secondary;
+  background-color: inherit;
+  background-image: url(../../assets/img/icon/icon-arrow-under-navy.svg);
+  background-position: right vw(14) top vw(8);
+  background-repeat: no-repeat;
+  background-size: vw(14);
+  appearance: none; /* デフォルトの矢印を非表示 */
+  color: $color-secondary;
+  font-weight: bold;
+  text-align: center;
+  text-align-last: center;
+  cursor: pointer;
+  @include fz_vw(26);
+
+  option {
+    color: $color-secondary;
+  }
+
+  &.selectbox--font-large {
+    font-size: vw(33);
+  }
+
+  &.selectbox--small {
+    height: vw(36);
+    background-position: right vw(4) top vw(8);
+    font-size: vw(18);
+  }
+
+  /* 初期表示時 */
+  &:invalid {
+    color: rgba($color-secondary, 0.3);
+    border-bottom: solid 2px rgba($color-secondary, 0.3);
+  }
+  &:disabled {
+    border-bottom: solid 2px rgba($color: $color-secondary, $alpha: 0.3);
+    color: rgba($color: $color-secondary, $alpha: 0.3);
+  }
+  &::-ms-expand {
+    display: none; /* デフォルトの矢印を非表示(IE用) */
+  }
+}
+
+/*=============================================================
+ radio button
+=============================================================*/
+.radio-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .radio-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-appearance: button;
+    appearance: button;
+    width: vw(147);
+    height: vw(43);
+    border-radius: vw(22);
+    background-color: $color-white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .radio-input {
+    appearance: none;
+    -moz-appearance: none;
+
+    &:checked + .radio-btn {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+  }
+}
+
+/*=============================================================
+ accordion / border
+=============================================================*/
+.accordion-border {
+  width: 100%;
+  border-bottom: 1px solid $color-line;
+
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: vw(16) 0;
+    font-weight: bold;
+    cursor: pointer;
+    @include fz_vw(14);
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: vw(14);
+      height: vw(14);
+      background-image: url("../../assets/img/icon/icon-arrow-under.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: transform 0.3s;
+    }
+  }
+
+  .accordion-text {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: vw(18) 0 vw(16);
+    color: $color-text-gray;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: transform 0.5s, opacity 0.5;
+    @include fz_vw(14);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &[open] {
+    summary::after {
+      transform: rotate(180deg);
+    }
+
+    .accordion-text {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+
+/*=============================================================
+ slider
+=============================================================*/
+.slider-wrapper {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider-img {
+  margin: 0 5px;
+}
+
+.slider-img img {
+  width: 100%;
+  height: 35.01vw;
+  max-width: 54.13vw;
+  object-fit: cover;
+}

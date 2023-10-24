@@ -1,0 +1,31 @@
+@use "variable" as *;
+@use "function" as *;
+
+/*=============================================================
+ breakpoint
+=============================================================*/
+$breakpoint-down: (
+  "pc": "screen and (max-width: #{map-get($breakpoints, "pc")})",
+  "sp": "screen and (max-width: #{map-get($breakpoints, "sp")})",
+) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+/*=============================================================
+ gradient color
+=============================================================*/
+@mixin gradient($direction, $color-1, $color-2) {
+  background: linear-gradient($direction, $color-1, $color-2);
+}
+
+/*=============================================================
+ font size
+=============================================================*/
+@mixin fz_vw($font_size: 10, $viewsize: 393) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size, $viewsize);
+}

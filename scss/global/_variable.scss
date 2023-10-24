@@ -1,0 +1,50 @@
+/*=============================================================
+ break point
+=============================================================*/
+$breakpoints: (
+  pc: 1280px,
+  laptop: 1080px,
+  sp: 393px,
+) !default;
+
+/*=============================================================
+ color
+=============================================================*/
+$color-primary: #f84ca2;
+$color-secondary: #1c2663;
+
+/* text */
+$color-text-black: #404040;
+$color-text-gray: #737373;
+$color-text-light-gray: #b3b3b3;
+
+/* button */
+$color-pale-purple: #cacee2;
+$color-pale-gray: #e5e5e5;
+$color-blue: #4db4ff;
+$color-blue-gradient01: #1ddcff;
+$color-blue-gradient02: #1bd5fc;
+$color-blue-gradient03: #19cefa;
+$color-blue-gradient04: #17c7f7;
+$color-blue-gradient05: #14c0f4;
+$color-blue-gradient06: #11b6f0;
+$color-blue-gradient07: #0da8eb;
+$color-blue-gradient08: #0ba1e8;
+$color-blue-gradient09: #099be6;
+$color-blue-gradient10: #007fdb;
+
+/* link */
+$color-link01: #4099ff;
+$color-link02: #40bfff;
+
+/* background */
+$color-base-white: #fafafa;
+$color-navy-gradient01: #1d2e93;
+$color-navy-gradient02: #091355;
+$color-line: #f2f2f2;
+$color-line02: #e8e8e8;
+
+/* other */
+$color-error: #eb4646;
+$color-white: #ffffff;
+$color-black: #000000;
