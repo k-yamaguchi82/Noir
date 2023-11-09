@@ -5,12 +5,17 @@
 
 html {
   height: 100%;
+  font-size: 62.5%;
+
+  @include mq-up(sm) {
+    font-size: 2.67vw;
+  }
 }
 
 body {
   background-color: $color-base-white;
   color: $color-white;
-  font-family: "Goudy Old Style", "Noto Sans JP", "Righteous", "Yu Mincho", メイリオ, sans-serif;
+  font-family: "Goudy Old Style", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Noto Sans JP", "Yu Mincho", メイリオ, sans-serif;
 }
 
 ul,

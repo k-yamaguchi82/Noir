@@ -1,0 +1,38 @@
+@keyframes rotate-text {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loop-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bgchange {
+  0% {
+    background: #4e4e4e;
+  } /*変化させたい色*/
+  25% {
+    background: #3e3d39;
+  } /*変化させたい色*/
+  50% {
+    background: #41403e;
+  } /*変化させたい色*/
+  75% {
+    background: #252525;
+  } /*変化させたい色*/
+  90% {
+    background: #b2dffb;
+  } /*変化させたい色*/
+  100% {
+    background: #252525;
+  } /*変化させたい色*/
+}

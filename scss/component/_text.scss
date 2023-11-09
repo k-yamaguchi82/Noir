@@ -1,0 +1,81 @@
+@use "../global/animation" as *;
+@use "../global/function" as *;
+@use "../global/mixin" as *;
+@use "../global/variable" as *;
+
+.circle-text {
+  width: 200px;
+  height: 200px;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: "NotoSansJP";
+  font-weight: 800;
+  text-align: center;
+  margin: 0;
+  transform: rotate(-80deg);
+  animation: rotate-text 10s linear infinite;
+
+  @include mq-up(sm) {
+    width: vw(180);
+    height: vw(180);
+    font-size: 1.4rem;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 15px);
+    display: inline-block;
+    width: 30px;
+    height: 100px;
+    transform-origin: center bottom;
+
+    @include mq-up(sm) {
+      width: vw(18);
+      height: vw(90);
+    }
+
+    &:nth-child(1) {
+      transform: rotate(0deg);
+    }
+    &:nth-child(2) {
+      transform: rotate(25.7deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(51.4deg);
+    }
+    &:nth-child(4) {
+      transform: rotate(77.1deg);
+    }
+    &:nth-child(5) {
+      transform: rotate(102.8deg);
+    }
+    &:nth-child(6) {
+      transform: rotate(128.5deg);
+    }
+    &:nth-child(7) {
+      transform: rotate(154.2deg);
+    }
+    &:nth-child(8) {
+      transform: rotate(179.9deg);
+    }
+    &:nth-child(9) {
+      transform: rotate(205.6deg);
+    }
+    &:nth-child(10) {
+      transform: rotate(231.3deg);
+    }
+    &:nth-child(11) {
+      transform: rotate(257deg);
+    }
+    &:nth-child(12) {
+      transform: rotate(282.7deg);
+    }
+    &:nth-child(13) {
+      transform: rotate(308.4deg);
+    }
+    &:nth-child(14) {
+      transform: rotate(334.1deg);
+    }
+  }
+}

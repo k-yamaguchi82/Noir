@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noir</title>
+    <!-- <title>Noir</title>
     <link rel="stylesheet" href="./assets/js/slick/slick.css" />
-    <link rel="stylesheet" href="./assets/js/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./assets/js/slick/slick-theme.css" /> -->
+    <!-- <link rel="stylesheet" href="./assets/js/swiper/swiper.min.css" /> -->
+    <link rel="stylesheet" href="./assets/js/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <script src="./assets/js/jquery/jquery-3.7.1.min.js"></script>
-    <script src="./assets/js/slick/slick.min.js"></script>
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="./assets/js/slick/slick.min.js"></script> -->
     <script src="./assets/js/common.js"></script>
   </head>
   <body>
@@ -36,7 +39,7 @@
       <!-- kv -->
       <section class="sec-kv">
         <div class="sec-kv-inner">
-          <img class="kv-img" src="./assets/img/img-coffee00.png" />
+          <img class="kv-img" src="./assets/img/img-coffee01.png" />
           <div class="kv-text">Mood<br /><br />Relax<br /><br />Fragrance<br /><br />Sophistication</div>
         </div>
       </section>
@@ -45,6 +48,7 @@
       <!-- about -->
       <section class="sec-about">
         <div class="sec-about-bg"></div>
+        <div class="sec-about-bg-black"></div>
         <div class="sec-about-detail">
           <div class="sec-about-detail-inner">
             <h2 class="sec-title">About</h2>
@@ -68,41 +72,66 @@
         <div class="sec-menu-inner">
           <h2 class="sec-title">Menu</h2>
           <div class="sec-menu-detail-wrapper">
-            <!-- detail -->
-            <div class="sec-menu-detail">
-              <p class="sec-menu-disc">
-                Noirでは、季節ごとに使用するコーヒー豆を変えており、<br />
-                その季節でしか味わえない風味をお楽しみください。
-              </p>
-              <ul class="sec-menu-list">
-                <li class="sec-menu-item">
-                  <p>ColdBrew Coffee</p>
-                  <p>¥650</p>
-                </li>
-                <li class="sec-menu-item">
-                  <p>Cafe Latte</p>
-                  <p>¥700</p>
-                </li>
-                <li class="sec-menu-item">
-                  <p>Espresso</p>
-                  <p>¥650</p>
-                </li>
-              </ul>
-              <div class="sec-menu-btn">
-                <button class="btn btn-general">Other menu</button>
+            <!-- swiper -->
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- detail -->
+                  <div class="sec-menu-detail">
+                    <p class="sec-menu-name-en">Specialty coffee</p>
+                    <p class="sec-menu-name">スペシャリティコーヒー</p>
+                    <p class="sec-menu-copy">
+                      丁寧に淹れた<br class="br-none" />
+                      最上級の一杯を。
+                    </p>
+                    <p class="sec-menu-disc">Noirでは、季節ごとに使用するコーヒー豆を変えており、その季節でしか味わえない風味をお楽しみください。</p>
+                    <div class="sec-menu-btn">
+                      <button class="btn btn-general">Other menu</button>
+                    </div>
+                  </div>
+                  <!-- /.detail -->
+                  <img src="./assets/img/img-coffee06.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <!-- detail -->
+                  <div class="sec-menu-detail">
+                    <p class="sec-menu-name-en">Specialty coffee</p>
+                    <p class="sec-menu-name">スペシャリティコーヒー</p>
+                    <p class="sec-menu-copy">
+                      丁寧に淹れた<br class="br-none" />
+                      最上級の一杯を。
+                    </p>
+                    <p class="sec-menu-disc">Noirでは、季節ごとに使用するコーヒー豆を変えており、その季節でしか味わえない風味をお楽しみください。</p>
+                  </div>
+                  <!-- /.detail -->
+                  <img src="./assets/img/img-coffee04.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <!-- detail -->
+                  <div class="sec-menu-detail">
+                    <p class="sec-menu-name-en">Specialty coffee</p>
+                    <p class="sec-menu-name">スペシャリティコーヒー</p>
+                    <p class="sec-menu-copy">
+                      丁寧に淹れた<br class="br-none" />
+                      最上級の一杯を。
+                    </p>
+                    <p class="sec-menu-disc">Noirでは、季節ごとに使用するコーヒー豆を変えており、その季節でしか味わえない風味をお楽しみください。</p>
+                  </div>
+                  <!-- /.detail -->
+                  <img src="./assets/img/img-coffee05.jpg" alt="" />
+                </div>
               </div>
             </div>
-            <!-- /.detail -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
 
-            <!-- slider -->
-            <div class="sec-menu-slider">
-              <ul class="slider">
-                <li class="slider-img"><img src="./assets/img/img-coffee03.jpg" alt="" /></li>
-                <li class="slider-img"><img src="./assets/img/img-coffee04.jpg" alt="" /></li>
-                <li class="slider-img"><img src="./assets/img/img-coffee05.jpg" alt="" /></li>
-              </ul>
+            <div class="sec-menu-circle-text">
+              <p class="circle-text">
+                <span>P</span><span>R</span><span>O</span><span>D</span><span>U</span><span>C</span><span>E</span><span>D</span><span>B</span><span>Y</span><span>N</span><span>O</span><span>I</span
+                ><span>R</span>
+              </p>
             </div>
-            <!-- /.slier -->
           </div>
         </div>
       </section>
@@ -110,21 +139,30 @@
 
       <!-- product -->
       <section class="sec-product">
+        <div class="sec-product-outside-right"></div>
         <div class="sec-product-inner">
           <h2 class="sec-title sec-title--black">Product</h2>
           <div class="sec-product-detail-wrapper">
-            <img class="sec-product-img" src="./assets/img/img-coffee06.jpg" alt="" />
+            <img class="sec-product-img" src="./assets/img/img-coffee05.jpg" alt="" />
             <div class="sec-product-detail">
-              <p class="sec-product-name">Mug Cup / マグカップ</p>
+              <p class="sec-product-name-en">Mug Cup</p>
+              <p class="sec-product-name">マグカップ</p>
               <p class="sec-product-copy">
-                日常の一杯に<br />
+                日常の一杯に<br class="br-none" />
                 雰囲気のアクセントを
               </p>
               <p class="sec-product-disc">日常の一杯に雰囲気のアクセントを加える。 コーヒーを飲む時の入れ物にもこだわることで、 香り、味もより引き立つ。</p>
-              <div class="">商品の詳細はこちら</div>
-              <div class="sec-menu-btn">
-                <button class="btn btn-general btn-general--black">Other menu</button>
+              <div class="sec-product-detail-btn">商品の詳細はこちら</div>
+              <div class="sec-product-btn">
+                <button class="btn btn-general btn-general--black">Other products</button>
               </div>
+            </div>
+
+            <div class="sec-product-circle-text">
+              <p class="circle-text">
+                <span>P</span><span>R</span><span>O</span><span>D</span><span>U</span><span>C</span><span>E</span><span>D</span><span>B</span><span>Y</span><span>N</span><span>O</span><span>I</span
+                ><span>R</span>
+              </p>
             </div>
           </div>
         </div>
@@ -132,19 +170,42 @@
       <!-- /.product -->
 
       <!-- message -->
-      <section class="sec-message">
+      <section id="sec-message" class="sec-message">
         <div class="sec-message-inner">
           <h3 class="sec-title sec-title--black">Message</h3>
           <p class="sec-message-title">
-            職人による<br />
-            洗練された技と体験で<br />
-            あなたに至福のひと時を。
+            こだわりのコーヒーを<br />
+            あなたにとって特別な場所で。
           </p>
           <p class="sec-message-lead">
-            2022年4月、かつて東京の台所といわれた食のまち,<br /><br />築地の一角にて, " Noir "はうまれました。<br /><br /><br />
-            " Noir "という名前は、味や香りはもちろん、<br /><br />一杯ずつ丁寧に淹れたコーヒーの色の違いも<br /><br />楽しんでもらいたいという思いが込められてます。<br /><br /><br />
-            「また来たい」と思っていただける特別な一杯を。
+            <span> 築地の路地に佇むカフェ、<br />静寂の中で珈琲の香りが立ち込める。<br />新鮮な海の幸を求める魚たちの歌声と、<br />職人の手によって生み出された<br />コーヒーの優美な調和。</span>
+            <span> 活気ある築地の街角に、<br />この小さなオアシスが佇んでいる。<br />朝市の喧騒と、職人たちの熟練の技術が共鳴し、<br />カフェの扉を開ける瞬間に、新しい世界が広がる。 </span>
+            <span>
+              こだわりの珈琲、<br />豆の選りすぐりから生まれる味わい。<br />焙煎の匠の手によって、一杯一杯に息づく情熱。<br />築地の精鋭たちが 珈琲豆に命を吹き込むように、<br />心を込めて淹れられた一杯。
+            </span>
+            <span>
+              カフェの雰囲気、静謐でありながら温かみがある。<br />お客様に最高の体験を提供すること。<br />我々の願いは、あなたがここで過ごす<br />特別なひとときが、思い出に残るものとなること。
+            </span>
+            <span> 築地からあなたへ。<br />あなたから全ての場所へ。<br />Noirは、心を込めて皆様をおもてなしします。</span>
           </p>
+
+          <img class="img01" src="./assets/img/img-coffee07.jpg" alt="" />
+          <img class="img02" src="./assets/img/img-coffee09.jpg" alt="" />
+          <img class="img03" src="./assets/img/img-coffee08.jpg" alt="" />
+          <img class="img04" src="./assets/img/img-coffee10.jpg" alt="" />
+          <img class="img05" src="./assets/img/img-coffee11.jpg" alt="" />
+          <img class="img06" src="./assets/img/img-coffee12.jpg" alt="" />
+
+          <div class="sec-message-slide-wrapper">
+            <p class="sec-message-slide-text">
+              <span>C</span><span>O</span><span>N</span><span>F</span><span>O</span><span>R</span><span>T</span><span>A</span><span>B</span><span>L</span><span>E</span><span> </span><span>P</span
+              ><span>L</span><span>A</span><span>C</span><span>E</span><span>&</span><span>T</span><span>A</span><span>S</span><span>T</span><span>E</span><span>S</span>
+            </p>
+            <p class="sec-message-slide-text">
+              <span>C</span><span>O</span><span>N</span><span>F</span><span>O</span><span>R</span><span>T</span><span>A</span><span>B</span><span>L</span><span>E</span><span> </span><span>P</span
+              ><span>L</span><span>A</span><span>C</span><span>E</span><span>&</span><span>T</span><span>A</span><span>S</span><span>T</span><span>E</span><span>S</span>
+            </p>
+          </div>
         </div>
       </section>
       <!-- /.message -->
@@ -156,7 +217,7 @@
           <ul class="sec-info-list">
             <li class="sec-info-item">
               <div class="sec-info-item-label">SHOP</div>
-              <p class="sec-info-item-title">Noir公式サイト公開のお知らせ</p>
+              <p class="sec-info-item-title line">Noir公式サイト公開のお知らせ</p>
               <p class="sec-info-item-date">2024.01.01</p>
               <a href="/"></a>
             </li>
@@ -192,8 +253,7 @@
             <p class="footer-disc">
               We value sustainability, quality experiences.<br />
               We invite you to be a part of it all with us and<br />
-              thank you for your on going support.<br />
-              <br />
+              thank you for your on going support.
             </p>
             <p class="footer-info">
               〒104-0045 東京都中央区築地0-0-0<br />

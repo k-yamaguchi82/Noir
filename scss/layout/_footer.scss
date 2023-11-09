@@ -11,6 +11,10 @@
   border-top: solid 1px $color-line02;
   background-color: #28292b;
 
+  @include mq-up(sm) {
+    padding: vw(115) 0 vw(62);
+  }
+
   .footer-inner {
     display: flex;
     justify-content: space-between;
@@ -18,15 +22,30 @@
     width: 100%;
     max-width: 950px;
     margin: 0 auto;
+
+    @include mq-up(sm) {
+      flex-direction: column-reverse;
+      align-items: center;
+      max-width: 100%;
+    }
   }
 
   .footer-detail-wrapper {
     display: flex;
     align-items: start;
+
+    @include mq-up(sm) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   .footer-detail {
     margin-left: 95px;
+
+    @include mq-up(sm) {
+      margin-left: 0;
+    }
   }
 
   .footer-nav {
@@ -36,8 +55,17 @@
       letter-spacing: 3px;
       line-height: 1.8;
 
+      @include mq-up(sm) {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+
       &:not(:first-child) {
         margin-top: 33px;
+
+        @include mq-up(sm) {
+          margin-top: vw(30);
+        }
       }
     }
   }
@@ -47,6 +75,11 @@
     font-weight: bold;
     font-family: "Goudy Old Style Bold";
     letter-spacing: 3px;
+
+    @include mq-up(sm) {
+      margin-top: vw(40);
+      font-size: 3rem;
+    }
   }
 
   .footer-disc {
@@ -54,13 +87,26 @@
     font-family: "Goudy Old Style Bold";
     letter-spacing: 3px;
     line-height: 1.8;
+
+    @include mq-up(sm) {
+      margin-top: vw(80);
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 
   .footer-info {
+    margin-top: 30px;
     font-size: 12px;
     font-family: "Yu Mincho";
     letter-spacing: 3px;
     line-height: 1.8;
+
+    @include mq-up(sm) {
+      margin-top: vw(24);
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 
   .footer-copyright {
@@ -69,5 +115,11 @@
     font-family: "Yu Mincho";
     letter-spacing: 3px;
     line-height: 1.8;
+
+    @include mq-up(sm) {
+      margin-top: vw(30);
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 }

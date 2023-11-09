@@ -4,12 +4,24 @@
 /*=============================================================
  breakpoint
 =============================================================*/
-$breakpoint-down: (
-  "pc": "screen and (max-width: #{map-get($breakpoints, "pc")})",
-  "sp": "screen and (max-width: #{map-get($breakpoints, "sp")})",
+$breakpoint-up: (
+  "xl": "screen and (max-width: 1440px)",
+  "lg": "screen and (max-width: 1281px)",
+  "md": "screen and (max-width: 1080px)",
+  "sm": "screen and (max-width: 780px)",
 ) !default;
 
-@mixin mq($breakpoint) {
+$breakpoint-down: (
+  "xl": "screen and (max-width: 1280px)",
+) !default;
+
+@mixin mq-up($breakpoint) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint) {
   @media #{map-get($breakpoint-down, $breakpoint)} {
     @content;
   }
