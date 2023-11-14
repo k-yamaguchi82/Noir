@@ -12,19 +12,22 @@
 
 /* NotoSans Medium */
 @font-face {
-  font-family: "NotoSans Medium";
+  font-family: "NotoSans";
+  font-weight: 500;
   src: url("../../assets/fonts/NotoSans/NotoSans-Medium.ttf") format("truetype");
 }
 
 /* NotoSans Bold */
 @font-face {
-  font-family: "NotoSans Bold";
+  font-family: "NotoSans";
+  font-weight: 600;
   src: url("../../assets/fonts/NotoSans/NotoSans-Bold.ttf") format("truetype");
 }
 
 /* NotoSans ExtraBold */
 @font-face {
-  font-family: "NotoSans ExtraBold";
+  font-family: "NotoSans";
+  font-weight: 700;
   src: url("../../assets/fonts/NotoSans/NotoSansJP-ExtraBold.ttf") format("truetype");
 }
 

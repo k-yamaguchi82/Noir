@@ -1,3 +1,7 @@
+.fadeUp {
+  animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
 @keyframes rotate-text {
   0% {
     transform: rotate(0);
@@ -16,23 +20,136 @@
   }
 }
 
-@keyframes bgchange {
+/* fadeUp */
+@keyframes fadeup {
   0% {
-    background: #4e4e4e;
-  } /*変化させたい色*/
-  25% {
-    background: #3e3d39;
-  } /*変化させたい色*/
-  50% {
-    background: #41403e;
-  } /*変化させたい色*/
-  75% {
-    background: #252525;
-  } /*変化させたい色*/
-  90% {
-    background: #b2dffb;
-  } /*変化させたい色*/
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
   100% {
-    background: #252525;
-  } /*変化させたい色*/
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes img-wrap {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    margin-top: -0.25em;
+    margin-left: -0.25em;
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: -7.5em;
+    margin-left: -7.5em;
+    opacity: 1;
+    height: 15em;
+    width: 15em;
+  }
+}
+
+@keyframes pulse2 {
+  0%,
+  25% {
+    opacity: 0;
+    margin-top: -0.25em;
+    margin-left: -0.25em;
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: -7.5em;
+    margin-left: -7.5em;
+    opacity: 1;
+    height: 15em;
+    width: 15em;
+  }
+}
+
+@keyframes pulse3 {
+  0%,
+  35% {
+    opacity: 0;
+    margin-top: -0.25em;
+    margin-left: -0.25em;
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: -7.5em;
+    margin-left: -7.5em;
+    opacity: 1;
+    height: 15em;
+    width: 15em;
+  }
+}
+
+@keyframes pulse4 {
+  0%,
+  45% {
+    opacity: 0;
+    margin-top: -0.25em;
+    margin-left: -0.25em;
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: -7.5em;
+    margin-left: -7.5em;
+    opacity: 1;
+    height: 15em;
+    width: 15em;
+  }
+}
+
+.delay02 {
+  animation-delay: 0.2s;
+}
+.delay04 {
+  animation-delay: 0.4s;
+}
+.delay06 {
+  animation-delay: 0.6s;
 }

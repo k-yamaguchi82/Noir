@@ -13,7 +13,7 @@
   text-align: center;
   margin: 0;
   transform: rotate(-80deg);
-  animation: rotate-text 10s linear infinite;
+  animation: rotate-text 15s linear infinite;
 
   @include mq-up(sm) {
     width: vw(180);
